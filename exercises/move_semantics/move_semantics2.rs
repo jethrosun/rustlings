@@ -12,7 +12,6 @@ fn main() {
     vec1.push(88);
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
-
 }
 
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
@@ -24,19 +23,6 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 
     vec
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // So `vec0` is being *moved* into the function `fill_vec` when we call it on
 // line 7, which means it gets dropped at the end of `fill_vec`, which means we
