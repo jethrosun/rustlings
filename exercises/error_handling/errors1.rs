@@ -11,7 +11,8 @@ pub fn generate_nametag_text(name: String) -> Option<String> {
         Some(format!("Hi! My name is {}", name))
     } else {
         // Empty names aren't allowed.
-        None
+        //None
+        Err(format!("`name` was empty; it must be nonempty."))
     }
 }
 
@@ -38,25 +39,6 @@ mod tests {
         );
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // `Err` is one of the variants of `Result`, so what the 2nd test is saying
 // is that `generate_nametag_text` should return a `Result` instead of an
